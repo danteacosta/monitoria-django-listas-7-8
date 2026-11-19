@@ -26,3 +26,9 @@ Sem padrão adicional. MVT padrão Django, ModelForm e ORM bastam. SQLite e serv
 
 ## Risks / Open Questions
 Sem autenticação no cadastro, conforme escopo didático local. Não é configuração de produção. Não inventar integrantes ou participação. Screenshots de teste local serão guardados separadamente; os grupos devem capturar sua própria execução.
+
+## Melhoria da sequência de ensino
+
+Pedido de 19/11/2026: apresentar a construção em três etapas, acompanhar um cadastro concreto, acrescentar exercícios curtos e separar testes introdutórios da jornada opcional. Roteiro em `docs/passo-a-passo.md`, com paradas para verificar cada etapa; guias por questão preservados. Os arquivos da aplicação permanecem a versão final para consulta.
+
+Verificação: reconstruir as etapas 1 e 2 em pasta temporária a partir dos trechos e instruções, consultar suas páginas pelo cliente Django e conferir os comandos dos testes introdutórios na etapa final. Revisar os links dos guias antes de publicar.

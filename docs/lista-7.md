@@ -2,6 +2,8 @@
 
 Vamos usar a **Estante da Turma** como exemplo. A ideia é terminar um projeto pequeno que você consiga explicar. Nesta primeira etapa, concentre-se na página inicial, nos dados e na listagem. A lista 8 vai continuar esse trabalho.
 
+Para escrever e executar os arquivos aos poucos, comece pela [etapa 1 do roteiro](passo-a-passo.md#etapa-1-lista-7-início-e-livros-do-banco). Este guia organiza as respostas na ordem das questões.
+
 ## Questão 1: escolher o problema
 
 **a) Nome:** Estante da Turma.

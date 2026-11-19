@@ -2,6 +2,32 @@
 
 Agora vamos fazer os endereços levarem informações para a view. Ao abrir um livro, o endereço informa seu ID. Ao escolher uma categoria, informa qual categoria queremos ver. Também vamos reaproveitar a estrutura HTML com `base.html`.
 
+## Comece pelo nome da categoria
+
+Antes de ler as rotas, pense em “quero ver os livros de Ficção”. Abra `/categorias-por-nome/Ficção/`: o texto `Ficção` chega à função `listar_categoria_nome`. Ela encontra a categoria e busca seus livros. Trocar o nome no endereço muda o filtro.
+
+Depois compare com `/categorias/ficcao/`. Essa segunda rota usa o campo `slug`: uma versão curta do nome, sem espaços nem acentos. As duas encontram a mesma categoria por campos diferentes.
+
+| Forma | Exemplo de endereço | O que a view recebe |
+|---|---|---|
+| Nome, com `str` | `/categorias-por-nome/Ficção/` | `nome_categoria="Ficção"` |
+| Slug | `/categorias/ficcao/` | `slug="ficcao"` |
+
+O exemplo mantém as duas porque a questão 6 pede `str` e a questão 2 pede `slug`. Estude primeiro a busca pelo nome, que já conhecemos, e depois a versão por slug. Para montar as páginas aos poucos, siga a [etapa 2 do roteiro](passo-a-passo.md#etapa-2-lista-8-detalhes-e-categorias).
+
+## Comece pelo nome da categoria
+
+Antes de olhar o código, abra `/categorias-por-nome/Ficção/` no seu servidor local. A parte `Ficção` informa qual categoria você quer. Ao trocar por `Ciência`, você pede outros livros. O conversor `str` recebe esse nome como texto e o entrega à view.
+
+Depois abra `/categorias/ficcao/`. Você verá os mesmos livros de Ficção. A diferença é que `ficcao` é o slug cadastrado para essa categoria: uma versão curta do nome, sem acentos nem espaços.
+
+| Forma de pedir a categoria | Informação que a view recebe | Campo usado na busca |
+|---|---|---|
+| `/categorias-por-nome/Ficção/` | `nome_categoria="Ficção"` | `nome` |
+| `/categorias/ficcao/` | `slug="ficcao"` | `slug` |
+
+As duas rotas existem porque a questão 6 pede `str` e a questão 2 pede `slug`. Primeiro acompanhe a busca pelo nome; depois compare a busca pelo slug. Não é necessário criar duas categorias: é a mesma categoria encontrada de duas formas.
+
 ## Questão 1: acompanhar o pedido do navegador
 
 O enunciado usa `/produtos/42/`. No nosso projeto, o exemplo equivalente é `/livros/42/`.

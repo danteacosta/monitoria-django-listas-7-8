@@ -51,11 +51,21 @@ O comando `loaddata exemplo` coloca alguns livros e categorias no banco para voc
 
 ## Por onde estudar
 
+Comece pelo [roteiro em três etapas](docs/passo-a-passo.md). Ele mostra como reconstruir o catálogo em uma pasta nova e o que conferir antes de avançar:
+
+| Etapa | O que você vai fazer | Como saber que funcionou |
+|---|---|---|
+| 1: lista 7 | Início, models, Admin e listagem | Um livro cadastrado no Admin aparece na lista |
+| 2: lista 8 | Detalhes, categorias e herança de templates | Trocar o ID ou a categoria muda a página |
+| 3: formulário | Cadastro com GET, POST e validação | O livro enviado aparece nos detalhes e na lista |
+
+Para consultar as respostas por questão:
+
 1. [Lista 7: planejar e montar o projeto](docs/lista-7.md).
 2. [Lista 8: continuar com rotas e templates](docs/lista-8.md).
 3. [Formulários: cadastrar um livro passo a passo](docs/formularios.md).
 
-Os guias apontam para os arquivos que você deve abrir em cada etapa. O código deste repositório já reúne as duas listas e o complemento. Para acompanhar a evolução, estude primeiro início, models e listagem; depois detalhes e categorias; por último, o cadastro com formulário.
+O código deste repositório já reúne as três etapas. Se você baixou o projeto pronto, pode executá-lo pelo README e acompanhar as funções na ordem do roteiro. Depois pratique com os [exercícios curtos](docs/exercicios.md).
 
 ## O que tem em cada arquivo
 
@@ -95,7 +105,7 @@ python manage.py test
 python manage.py check
 ```
 
-O primeiro comando executa os testes. O segundo procura problemas de configuração. Veja também o [roteiro para testar no navegador](docs/verificacao.md).
+O primeiro comando executa os testes. O segundo procura problemas de configuração. Para entender um teste pequeno antes de ler o arquivo inteiro, siga o [guia de testes para começar](docs/testes.md). Veja também o [roteiro para testar no navegador](docs/verificacao.md).
 
 Este exemplo usa SQLite e o servidor local do Django. O cadastro de livros está aberto para facilitar a aula. Não há login para cadastrar, editar ou excluir pela aplicação. O projeto não tem edição nem exclusão fora do Admin. Antes de colocar o site na internet, será necessário tratar permissões e configurações de produção. O Gist ou o GitHub guardam os arquivos; não executam o servidor Django.
 
