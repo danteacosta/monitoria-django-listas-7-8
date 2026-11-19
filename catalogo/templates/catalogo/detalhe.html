@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ livro.nome }} | Estante da Turma{% endblock %}
+
+{% block content %}
+<h1>{{ livro.nome }}</h1>
+<p><strong>Autor:</strong> {{ livro.autor }}</p>
+<p><strong>Categoria:</strong>
+    <a href="{% url 'catalogo:categoria' livro.categoria.slug %}">{{ livro.categoria.nome }}</a>
+</p>
+<p>{{ livro.descricao|default:"Sem descrição por enquanto." }}</p>
+<a href="{% url 'catalogo:listar' %}">Voltar para os livros</a>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ nome_projeto }}</h1>
+<p>{{ descricao }}</p>
+<p>Veja os livros e as categorias ou cadastre um novo livro.</p>
+<ul>
+    <li><a href="{% url 'catalogo:listar' %}">Conhecer os livros</a></li>
+    <li><a href="{% url 'catalogo:cadastrar' %}">Cadastrar um livro</a></li>
+</ul>
+{% endblock %}

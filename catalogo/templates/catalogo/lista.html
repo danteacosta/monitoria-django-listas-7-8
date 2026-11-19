@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Livros da turma</h1>
+<h2>Categorias</h2>
+<ul>
+    {% for categoria in categorias %}
+    <li><a href="{% url 'catalogo:categoria' categoria.slug %}">{{ categoria.nome }}</a></li>
+    {% empty %}
+    <li>Cadastre uma categoria no painel administrativo para começar.</li>
+    {% endfor %}
+</ul>
+<h2>Todos os livros</h2>
+{% if lista_itens %}
+<ul>
+    {% for item in lista_itens %}
+    <li>
+        <a href="{% url 'catalogo:detalhe' item.pk %}">{{ item.nome|upper }}</a>
+        <br>Autor: {{ item.autor }}
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>Nenhum livro cadastrado.</p>
+{% endif %}
+<a href="{% url 'catalogo:cadastrar' %}">Cadastrar livro</a>
+{% endblock %}

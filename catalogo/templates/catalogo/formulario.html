@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Cadastrar livro</h1>
+<p>Nome, autor e categoria são obrigatórios. A descrição é opcional.</p>
+<p>As categorias são cadastradas no painel administrativo.</p>
+<form method="post" action="{% url 'catalogo:cadastrar' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Salvar livro</button>
+</form>
+<p><a href="{% url 'catalogo:listar' %}">Cancelar e voltar</a></p>
+{% endblock %}

@@ -1,0 +1,8 @@
+[
+  {"model": "catalogo.categoria", "pk": 1, "fields": {"nome": "Ficção", "slug": "ficcao"}},
+  {"model": "catalogo.categoria", "pk": 2, "fields": {"nome": "Ciência", "slug": "ciencia"}},
+  {"model": "catalogo.categoria", "pk": 3, "fields": {"nome": "História", "slug": "historia"}},
+  {"model": "catalogo.livro", "pk": 1, "fields": {"nome": "O pequeno príncipe", "autor": "Antoine de Saint-Exupéry", "descricao": "Um menino visita planetas e conhece personagens diferentes.", "categoria": 1}},
+  {"model": "catalogo.livro", "pk": 2, "fields": {"nome": "Cosmos", "autor": "Carl Sagan", "descricao": "Uma apresentação da ciência e do universo.", "categoria": 2}},
+  {"model": "catalogo.livro", "pk": 3, "fields": {"nome": "A ilha do tesouro", "autor": "Robert Louis Stevenson", "descricao": "Uma aventura em busca de um tesouro.", "categoria": 1}}
+]

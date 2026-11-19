@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Categoria: {{ categoria.nome }}</h1>
+<ul>
+    {% for item in lista_itens %}
+    <li>
+        <a href="{% url 'catalogo:detalhe' item.pk %}">{{ item.nome }}</a>
+        <br>Autor: {{ item.autor }}
+    </li>
+    {% empty %}
+    <li>Nenhum livro nesta categoria.</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'catalogo:listar' %}">Ver todos os livros</a>
+{% endblock %}
